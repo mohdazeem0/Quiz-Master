@@ -106,7 +106,7 @@ Screen1 As screen:
         Text: ="Reveal Answer"
         Visible: =!gblShowAnswer
         Width: =224
-        X: =794
+        X: =782
         Y: =612
         ZIndex: =13
 
