@@ -1,0 +1,352 @@
+Screen1 As screen:
+
+    "quesGallary As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+        BorderColor: =RGBA(50, 86, 160, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DelayItemLoading: =true
+        Height: =501
+        Items: |-
+            =Search(
+                'Flash Card',
+                quesSearchInput.Text,
+                "Q"
+            )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =90
+        Width: =472
+        X: =18
+        Y: =200
+        ZIndex: =1
+
+        quesLbl As label:
+            Color: =RGBA(50, 86, 160, 0.82)
+            FontWeight: =FontWeight.Bold
+            Height: =30
+            HoverColor: =RGBA(9, 41, 107, 1)
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =17
+            Text: =ThisItem.Q
+            VerticalAlign: =VerticalAlign.Top
+            Width: =378
+            X: =32
+            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + confidLbl.Size * 1.8)) / 2
+            ZIndex: =1
+
+        confidLbl As label:
+            Color: =RGBA(50, 86, 160, 1)
+            FontWeight: =FontWeight.Lighter
+            Height: =Self.Size * 1.8
+            HoverColor: =RGBA(9, 41, 107, 1)
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =15
+            Text: |-
+                ="Confidence Level : " & ThisItem.'Confidence Level'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =quesLbl.Width
+            X: =quesLbl.X
+            Y: =quesLbl.Y + quesLbl.Height
+            ZIndex: =2
+
+        NextArrow2 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(166, 166, 166, 1)
+            Height: =50
+            HoverColor: =Color.DarkRed
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="View item details"
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =3
+
+        Separator2 As rectangle:
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =4
+
+        quesNoLbl As label:
+            Color: =RGBA(50, 86, 160, 0.82)
+            FontWeight: =FontWeight.Bold
+            Height: =30
+            HoverColor: =RGBA(9, 41, 107, 1)
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =17
+            Text: =ThisItem.'Question No.'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =44
+            Y: =16
+            ZIndex: =6
+
+    RevealBtn_1 As button:
+        Fill: =RGBA(0, 153, 36, 1)
+        Height: =65
+        OnSelect: =Set(gblShowAnswer, true)
+        Text: ="Reveal Answer"
+        Visible: =!gblShowAnswer
+        Width: =224
+        X: =794
+        Y: =612
+        ZIndex: =13
+
+    quesLabel As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =13
+
+        Label2 As label:
+            BorderColor: =RGBA(168, 0, 0, 1)
+            BorderStyle: =BorderStyle.Dashed
+            BorderThickness: =2
+            Color: =RGBA(204, 20, 20, 0.7)
+            Fill: =RGBA(255, 240, 240, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =111
+            Size: =30
+            Text: =quesGallary.Selected.Q
+            Width: =816
+            X: =510
+            Y: =200
+            ZIndex: =2
+
+        Label3 As label:
+            BorderColor: =RGBA(168, 0, 0, 1)
+            BorderStyle: =BorderStyle.Dashed
+            BorderThickness: =2
+            Color: =RGBA(168, 0, 0, 0.73)
+            Fill: =RGBA(255, 240, 240, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =44
+            Size: =20
+            Text: ="Question " & quesGallary.Selected.'Question No.'
+            Width: =192
+            X: =510
+            Y: =156
+            ZIndex: =3
+
+    ansLabel As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =13
+
+        Label3_1 As label:
+            BorderColor: =RGBA(141, 198, 63, 1)
+            BorderStyle: =BorderStyle.Dashed
+            BorderThickness: =2
+            Color: =RGBA(66, 110, 4, 0.67)
+            Fill: =RGBA(230, 255, 224, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =44
+            Size: =20
+            Text: ="Answer"
+            Visible: =gblShowAnswer
+            Width: =112
+            X: =510
+            Y: =353
+            ZIndex: =5
+
+        Label2_1 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(141, 198, 63, 1)
+            BorderStyle: =BorderStyle.Dashed
+            BorderThickness: =2
+            Color: =RGBA(0, 107, 21, 0.8)
+            Fill: =RGBA(230, 255, 224, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =111
+            Size: =50
+            Text: =quesGallary.Selected.A
+            Visible: =gblShowAnswer
+            Width: =816
+            X: =510
+            Y: =397
+            ZIndex: =6
+
+    Confidence_Level As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =13
+
+        "'1' As button":
+            Fill: =RGBA(153, 207, 236, 1)
+            Height: =Self.Width
+            HoverBorderColor: =ColorFade(Self.BorderColor, 50%)
+            OnSelect: |-
+                =Set(gblShowAnswer, false);
+                Patch(
+                    'Flash Card',
+                    quesGallary.Selected,
+                    {
+                        'Confidence Level': Value(Self.Text)
+                    }
+                )
+            RadiusBottomLeft: =100
+            RadiusBottomRight: =100
+            RadiusTopLeft: =100
+            RadiusTopRight: =100
+            Text: ="1"
+            Visible: =gblShowAnswer
+            Width: =60
+            X: =722
+            Y: =617
+            ZIndex: =7
+
+        "'2' As button":
+            Fill: =RGBA(153, 207, 236, 1)
+            Height: =Self.Width
+            HoverBorderColor: =ColorFade(Self.BorderColor, 50%)
+            OnSelect: |-
+                =Set(gblShowAnswer, false);
+                Patch(
+                    'Flash Card',
+                    quesGallary.Selected,
+                    {
+                        'Confidence Level': Value(Self.Text)
+                    }
+                )
+            RadiusBottomLeft: =100
+            RadiusBottomRight: =100
+            RadiusTopLeft: =100
+            RadiusTopRight: =100
+            Text: ="2"
+            Visible: =gblShowAnswer
+            Width: =60
+            X: =794
+            Y: =617
+            ZIndex: =8
+
+        "'3' As button":
+            Fill: =RGBA(153, 207, 236, 1)
+            Height: =Self.Width
+            HoverBorderColor: =ColorFade(Self.BorderColor, 50%)
+            OnSelect: |-
+                =Set(gblShowAnswer, false);
+                Patch(
+                    'Flash Card',
+                    quesGallary.Selected,
+                    {
+                        'Confidence Level': Value(Self.Text)
+                    }
+                )
+            RadiusBottomLeft: =100
+            RadiusBottomRight: =100
+            RadiusTopLeft: =100
+            RadiusTopRight: =100
+            Text: ="3"
+            Visible: =gblShowAnswer
+            Width: =60
+            X: =874
+            Y: =617
+            ZIndex: =9
+
+        "'4' As button":
+            Fill: =RGBA(153, 207, 236, 1)
+            Height: =Self.Width
+            HoverBorderColor: =ColorFade(Self.BorderColor, 50%)
+            OnSelect: |-
+                =Set(gblShowAnswer, false);
+                Patch(
+                    'Flash Card',
+                    quesGallary.Selected,
+                    {
+                        'Confidence Level': Value(Self.Text)
+                    }
+                )
+            RadiusBottomLeft: =100
+            RadiusBottomRight: =100
+            RadiusTopLeft: =100
+            RadiusTopRight: =100
+            Text: ="4"
+            Visible: =gblShowAnswer
+            Width: =60
+            X: =951
+            Y: =617
+            ZIndex: =10
+
+        "'5' As button":
+            Fill: =RGBA(153, 207, 236, 1)
+            Height: =Self.Width
+            HoverBorderColor: =ColorFade(Self.BorderColor, 50%)
+            OnSelect: |-
+                =Set(gblShowAnswer, false);
+                Patch(
+                    'Flash Card',
+                    quesGallary.Selected,
+                    {
+                        'Confidence Level': Value(Self.Text)
+                    }
+                )
+            RadiusBottomLeft: =100
+            RadiusBottomRight: =100
+            RadiusTopLeft: =100
+            RadiusTopRight: =100
+            Text: ="5"
+            Visible: =gblShowAnswer
+            Width: =60
+            X: =1028
+            Y: =617
+            ZIndex: =11
+
+        conf_lvl_lbl As label:
+            Align: =Align.Center
+            Color: =RGBA(149, 149, 149, 1)
+            Height: =81
+            Size: =17
+            Text: ="How well did you knew the answer ?"
+            Visible: =gblShowAnswer
+            Width: =432
+            X: =688
+            Y: =553
+            ZIndex: =12
+
+    quesSearchInput As text:
+        BorderStyle: =BorderStyle.None
+        Default: =""
+        Height: =55
+        HintText: ="Search questions..."
+        HoverFill: =RGBA(255, 255, 255, 1)
+        Size: =16
+        Width: =472
+        X: =18
+        Y: =145
+        ZIndex: =14
+
+    Label5 As label:
+        Align: =Align.Center
+        Color: =RGBA(109, 49, 162, 0.71)
+        Fill: =RGBA(109, 49, 162, 0.11)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =99
+        Size: =60
+        Text: ="Quiz Master"
+        Width: =1366
+        ZIndex: =15
+

@@ -1,0 +1,24 @@
+{
+  "72f17b00-3e77-49dd-a5aa-6b707ff44662": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/alexsp/sporelease/1.0.1682.3673/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://thelearnigacademy.sharepoint.com/sites/QuizSite": {
+        "dataSources": {
+          "Flash Card": {
+            "tableName": "78e2dc94-87f6-475a-afe1-58c8d93ca6e8"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Flash Card"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "72f17b00-3e77-49dd-a5aa-6b707ff44662"
+  }
+}

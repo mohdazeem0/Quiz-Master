@@ -1,0 +1,148 @@
+{
+  "ComponentIndexes": {},
+  "ControlUniqueGuids": {},
+  "ControlUniqueIds": {
+    "1": 24,
+    "2": 27,
+    "3": 28,
+    "4": 29,
+    "5": 30,
+    "ansLabel": 33,
+    "App": 1,
+    "conf_lvl_lbl": 31,
+    "Confidence_Level": 34,
+    "confidLbl": 14,
+    "galleryTemplate1": 6,
+    "Host": 3,
+    "Label2": 19,
+    "Label2_1": 23,
+    "Label3": 20,
+    "Label3_1": 22,
+    "Label5": 37,
+    "NextArrow2": 15,
+    "quesGallary": 5,
+    "quesLabel": 32,
+    "quesLbl": 13,
+    "quesNoLbl": 38,
+    "quesSearchInput": 36,
+    "RevealBtn_1": 35,
+    "Screen1": 4,
+    "Separator2": 16
+  },
+  "FunctionParamsInvariantScripts": {},
+  "FunctionParamsInvariantScriptsOnInstances": {},
+  "HeaderLastSavedDateTimeUTC": "03/15/2024 21:16:28",
+  "IsLegacyComponentAllowGlobalScopeCase": false,
+  "LocalConnectionIDReferences": {
+    "72f17b00-3e77-49dd-a5aa-6b707ff44662": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/692b871035a34f8988272fd5a211469a\""
+  },
+  "LocalDatabaseReferencesAsEmpty": true,
+  "LocalResourceFileNames": {},
+  "LocalResourceRootPaths": {},
+  "OldLogoFileName": "crtthgot.jpg",
+  "OrderComponentMetadata": {},
+  "OrderComponentTemplate": {},
+  "OrderDataSource": {
+    "CustomGallerySample": 0,
+    "Flash Card": 1
+  },
+  "OrderGroupControls": {
+    "ansLabel": {
+      "Label2_1": 1,
+      "Label3_1": 0
+    },
+    "Confidence_Level": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "conf_lvl_lbl": 0
+    },
+    "quesLabel": {
+      "Label2": 0,
+      "Label3": 1
+    }
+  },
+  "OrderPcfTemplate": {},
+  "OrderTemplate": {},
+  "OrderXMLTemplate": {
+    "button": 5,
+    "gallery": 2,
+    "icon": 3,
+    "label": 0,
+    "rectangle": 4,
+    "text": 1
+  },
+  "OverridablePropertiesEntry": {
+    "1": {},
+    "2": {},
+    "3": {},
+    "4": {},
+    "5": {},
+    "ansLabel": {},
+    "App": {},
+    "conf_lvl_lbl": {},
+    "Confidence_Level": {},
+    "confidLbl": {},
+    "galleryTemplate1": {},
+    "Host": {},
+    "Label2": {},
+    "Label2_1": {},
+    "Label3": {},
+    "Label3_1": {},
+    "Label5": {},
+    "NextArrow2": {},
+    "quesGallary": {},
+    "quesLabel": {},
+    "quesLbl": {},
+    "quesNoLbl": {},
+    "quesSearchInput": {},
+    "RevealBtn_1": {},
+    "Screen1": {},
+    "Separator2": {}
+  },
+  "PCFDynamicSchemaForIRRetrievalEntry": {},
+  "PCFTemplateEntry": {},
+  "PublishOrderIndices": {
+    "1": 18,
+    "2": 19,
+    "3": 20,
+    "4": 21,
+    "5": 22,
+    "ansLabel": 13,
+    "App": 0,
+    "conf_lvl_lbl": 15,
+    "Confidence_Level": 16,
+    "confidLbl": 9,
+    "galleryTemplate1": 5,
+    "Host": 0,
+    "Label2": 11,
+    "Label2_1": 14,
+    "Label3": 2,
+    "Label3_1": 12,
+    "Label5": 0,
+    "NextArrow2": 8,
+    "quesGallary": 4,
+    "quesLabel": 3,
+    "quesLbl": 7,
+    "quesNoLbl": 6,
+    "quesSearchInput": 1,
+    "RevealBtn_1": 17,
+    "Screen1": 0,
+    "Separator2": 10
+  },
+  "ResourcesJsonIndices": {
+    "Image-SampleImage": 0
+  },
+  "RuleScreenIdWithoutScreen": {},
+  "TemplateVersions": {},
+  "VolatileProperties": {
+    "AnalysisLoadTime": 0.0344544,
+    "ControlCount": {
+      "button": 6,
+      "label": 3
+    }
+  },
+  "WasLocalDatabaseReferencesEmpty": true
+}
